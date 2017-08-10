@@ -27,12 +27,13 @@ some of my codes from the Psychic Game solution.
     var cpuArr = cpuWord.split("");
 
     // Tried to convert the array of letters into the right number of blank spaces.
-    for (var i = 0; i < cpuArr.length; i++){
+    var spaces = for (var i = 0; i < cpuArr.length; i++){
 	  cpuArr[i] = "_ "; };
 
     // Tried to have the blank spaces show up in the HTML inside the "spaces" div.
     // I got this to work for a minute and then it stopped working.
-    document.querySelector("#spaces").innerHTML = cpuArr;
+
+   document.querySelector("#spaces").innerHTML = cpuArr;
 
     // Now is when we would hav been starting the game. This function is 
     //run whenever the user presses a key.
@@ -53,6 +54,7 @@ some of my codes from the Psychic Game solution.
 
     // Creating a variable to hold our new HTML. Our HTML now keeps track of the user and computer guesses, and wins/losses/ties.
      var html =
+      "<p> Your word to guess:" + spaces + "</p>" +
       "<p>wins: " + wins + "</p>" +
       "<p>losses: " + losses + "</p>" +
       "<p>Guesses Left: " + guesses + "</p>" +
